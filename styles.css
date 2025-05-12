@@ -1,0 +1,114 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #0f172a;
+    color: white;
+}
+
+h1{
+    align-items: center;
+    text-align: center;
+    font-family: "Poppins";
+}
+
+h2 {
+    font-family: "Inter";
+}
+
+h3 {
+    font-family: "Inter";
+}
+
+.inputline{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+
+#weatherinfo {
+    width: 100%;
+    max-width: 500px; /* Matches search container */
+    margin: 20px auto; /* Centers box and adds vertical space */
+  }
+
+.cityDisplay{
+    justify-content: center;
+    align-items: center;
+}
+
+.centerContainer{
+    margin: 25vh;
+    padding: 35px;
+    width: auto;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+}
+
+#cityName, #getWeatherButton {
+    height: 42px;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 44px; 
+    line-height: 1.5;
+}
+
+#cityName{
+    text-align: center;
+    font-family: "Inter";
+}
+
+#getWeatherButton {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    font-family: "Inter";
+    cursor: pointer;
+    box-shadow: none;
+    height: 42px;
+}
+#getWeatherButton:hover {
+    transition: 2s;
+    background: #2563eb;
+}
+
+.topline {
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+  }
+  
+.cityDisplay {
+    margin: 0; 
+}
+  
+.weatherImage {
+    width: 80px;
+    height: 80px;
+    image-rendering: crisp-edges;
+}
+
+
+
+.humidity {
+    text-align: center;
+}
+
+.temperature {
+    text-align: center;
+}
+
+.mainDesc {
+    text-align: right;
+}

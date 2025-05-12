@@ -1,8 +1,5 @@
 document.getElementById("getWeatherButton").addEventListener("click", fetchWeather)
 
-
-
-
 async function fetchWeather(){
     city = document.getElementById("cityName");
     cityName = city.value;
@@ -31,12 +28,12 @@ async function fetchWeather(){
 
 
         const temperature = document.createElement("h3");
-        temperature.textContent = convertToFahrenheit(data.main.temp) + "\u2109";
+        temperature.textContent = "Temp: " + Math.round(convertToFahrenheit(data.main.temp)) + " \u2109";
         temperature.className = "temperature";
 
 
         const humidity = document.createElement("h3");
-        humidity.textContent = data.main.humidity;
+        humidity.textContent = "Humidity: " + Math.round(data.main.humidity);
         humidity.className = "humidity";
 
         const iconCode = data.weather[0].icon;
@@ -47,14 +44,20 @@ async function fetchWeather(){
         weatherIcon.src = iconURL;
         weatherIcon.alt = "Weather Icon"
 
+        const cityAndIcon = document.createElement("div");
+        cityAndIcon.className = "topline";
+        cityAndIcon.appendChild(cityDisplayName);
+        cityAndIcon.appendChild(weatherIcon);
+        cityAndIcon.appendChild(mainDesc);
 
-        weatherData.appendChild(cityDisplayName);
-        weatherData.appendChild(weatherIcon);
-        weatherData.appendChild(mainDesc);
+        //weatherData.appendChild(cityDisplayName);
+        //weatherData.appendChild(weatherIcon);
+        weatherData.appendChild(cityAndIcon);
+        //weatherData.appendChild(mainDesc);
         weatherData.appendChild(temperature);
         weatherData.appendChild(humidity);
         
-
+        console.log(data)
 
     }
     catch(error){
