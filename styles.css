@@ -38,6 +38,7 @@ h3 {
     width: 100%;
     max-width: 500px; /* Matches search container */
     margin: 20px auto; /* Centers box and adds vertical space */
+    font-family: "Inter";
   }
 
 .cityDisplay{
